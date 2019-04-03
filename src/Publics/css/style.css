@@ -1,0 +1,11 @@
+.greybg {
+    background-color: #f5f5f5;
+}
+
+.navbar-dropdown .navbar-item {
+    padding: 0.5em 1em !important;
+}
+
+#member_menu:hover {
+    background: #2763c4 !important;
+}

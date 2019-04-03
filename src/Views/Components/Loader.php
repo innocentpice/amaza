@@ -1,0 +1,1 @@
+<div class="pageloader is-active is-info"><span class="title"><?=$this->LoaderMsg?></span></div>

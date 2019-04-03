@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Amaza</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <style type="text/css">
+            .iVote,
+            .iVote li {
+                display: block;
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                float: left;
+            }
+
+            .iVote {
+                clear: both;
+                float: left;
+            }
+
+            .iVote li,
+            .iVote li.VoteD {
+                display: block;
+                width: 16px;
+                height: 15px;
+                position: relative;
+                background: url(./jquery.ui.stars.gif) no-repeat 0 0;
+                background-position: 0 -32px;
+                margin-right: 2px;
+                cursor: pointer;
+            }
+
+            .iVote li.VoteD {
+                background-position: 0 -64px;
+            }
+
+            .iVote li.VoteD2 {
+                background-position: 0 -48px;
+            }
+
+            span.showVoteText {
+                padding-left: 5px;
+                font-style: italic;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="column">
+            <div class="columns is-centered">
+                <div class="column is-7">
+                    <article class="tile is-child box">
+                        <div class="columns is-gapless">
+                            <div class="column is-3">
+                                <div class="container" style="width:14em;margin-left:1em">
+                                    <div class="columns is-gapless">
+                                        <figure>
+                                            <img src="http://www.freelanceme.net/Images/default%20profile%20picture.png" style="width:120px;height:120px;">
+                                        </figure>
+                                    </div>
+                                    <div>
+                                        <ul class="iVote">
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+                                        <input name="rating" type="hidden" id="hScore1" />
+                                        <span class="showVoteText"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <textarea class="textarea" type="text" placeholder="Normal textarea"></textarea>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="columns is-centered">
+                <div class="column is-7">
+                    <article class="tile is-child box">
+                        <div class="tabs is-small">
+                            <ul>
+                                <li class="is-active"><a>Newest</a></li>
+                                <li><a>Popular</a></li>
+                            </ul>
+                        </div>
+                        <div class="column is-2">
+                            <div class="container" style="margin-left:1em">
+                                <div class="columns is-gapless">
+                                    <figure>
+                                        <img src="http://www.freelanceme.net/Images/default%20profile%20picture.png" style="width:65px;height:65px;">
+                                    </figure>
+                                    <div class="column" style="margin-left:1em;">
+                                        <b>ชื่อ</b>
+                                        <div>
+                                            <ul class="iVote ">
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                                <li></li>
+                                            </ul>
+                                            <br />
+                                            <span class="showVoteText ">5 Point!</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column" style="margin-left:1em;">
+                            <p>พื้นที่นี้ไม่ทำให้ผิดหวัง แน่นอนฉันจะกลับไปเป็นมุมมองที่น่าตื่นตาตื่นใจอย่างแน่นอน! มันสะอาดและสะดวกสบายและฉันรักทุกสิ่งทุกอย่างเกี่ยวกับมัน!</p>
+                        </div>
+                        <hr>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.2.4.min.js " integrity="sha256-mfPAEMp15RaTF6QxFReOn5ax5KwxRw5VCEN9TntGdHo=" crossorigin=" anonymous "></script>
+        <script>
+            $(function () {
+                var arrTextVote = new Array("1 Point!!! ", "2 Point!!! ", "3 Point!!! ", "4 Point!!! ", "5 Point!!! ");
+
+                $("ul.iVote li ").click(function () {
+                    var prObj = $(this).parent("ul ");
+                    if (prObj.children("li ").hasClass("VoteD2 ") == false) {
+                        var Clto = prObj.children("li ").index(this);
+                        var Clto2 = Clto;
+                        Clto += 1;
+                        prObj.next("#hScore1 ").val(Clto);
+                        prObj.children("li:lt( " + Clto + ") ").addClass("VoteD2 ");
+                        prObj.children("li:gt( " + Clto + ") ").removeClass("VoteD ");
+                        prObj.children("li ").unbind("mouseover ");
+                        prObj.unbind("mouseout ");
+                        prObj.nextAll("span.showVoteText:eq(0) ")
+                            .html(arrTextVote[Clto2]);
+                    }
+                });
+            });
+        </script>
+    </body>
+
+</html>

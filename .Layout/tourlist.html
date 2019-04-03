@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th" class="isMobile">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Amaza</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    </head>
+
+    <body class="greybg">
+        <div class="App">
+
+            <nav class="navbar is-link" role="navigation" aria-label="dropdown navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="./">
+                            <h1 class="title" style="color:#fff;">Amaza</h1>
+                        </a>
+                        <div class="navbar-burger burger" onClick="$('#NavDropdown').toggleClass('is-hidden-touch');$(this).toggleClass('is-active');">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="navbar-end">
+                        <nav id="NavDropdown" class="navbar is-hidden-touch">
+                            <div class="navbar-item has-dropdown">
+                                <a class="navbar-link is-hidden-touch" style="background-color:hsl(217, 71%, 53%);" onClick=" $( '.navbar-item.has-dropdown').toggleClass( 'is-active'); ">
+                                  Chanachai Sappaso
+                                </a>
+                                <div class="navbar-dropdown ">
+                                    <a class="navbar-item ">
+                                        รายการทัวร์ของฉัน
+                                        <span class="tag " style="margin:0px 0.5em; background:hsl(141, 71%, 48%); ">
+                                          1
+                                        </span>
+                                    </a>
+                                    <a class="navbar-item ">
+                                        ตั้งค่าโปรไฟล์
+                                    </a>
+                                    <hr class="navbar-divider ">
+                                    <a class="navbar-item ">
+                                        <button class="button is-danger is-fullwidth ">ออกจากระบบ</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container" style="margin-top:2.5em;">
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <div class="search-box ">
+                                <div class="field has-addons has-addons-centered ">
+                                    <p class="control ">
+                                        <a class="button is-static is-medium ">
+                                        ค้นหา
+                                    </a>
+                                    </p>
+                                    <p class="control is-expanded ">
+                                        <input class="input is-medium " type="tel " placeholder="ชื่อสถานที่ หมู่บ้าน อำเภอ ตำบล แม่น้ำ น้ำตก ">
+                                    </p>
+                                    <p class="control ">
+                                        <a class="button is-success is-medium " style="border: 2px solid #fff; ">
+                                        <span class="icon is-medium " style="padding:1em; ">
+                                          <i class="fas fa-search "></i>
+                                        </span>
+                                    </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top:2.5em;">
+                <div class="tile is-ancestor">
+                    <div class="tile is-parent">
+                        <article class="tile is-child box">
+                            <table class="table is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th><abbr title="Position">#</abbr></th>
+                                        <th><abbr title="Trip Name">Trip Name</abbr></th>
+                                        <th><abbr title="Price">Price</abbr></th>
+                                        <th><abbr title="Man Slot">Man Slot</abbr></th>
+                                        <th><abbr title="Payment">Payment</abbr></th>
+                                        <th><abbr title="Option">Option</abbr></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Ayuttaya</td>
+                                        <td>2000</td>
+                                        <td>1</td>
+                                        <td>Billing</td>
+                                        <td>
+                                            <a class="button is-primary">
+                                                <span class="icon has-text-white">
+                                                  <i class="fas fa-search-plus"></i>
+                                                </span>
+                                            </a>
+                                            <a class="button is-info">
+                                                <span class="icon has-text-white">
+                                                  <i class="fas fa-credit-card"></i>
+                                                </span>
+                                            </a>
+                                            <a class="button is-danger">
+                                                <span class="icon has-text-white">
+                                                  <i class="fas fa-trash-alt"></i>
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer" style="background:#fff;margin-top:2.5em;">
+                <div class="container">
+                    <div class="content has-text-centered">
+                        <p>
+                            <strong>ออกแบบและพัฒนาโดย</strong>
+                            <a href="">Amaza Delvoloper Team.</a> &nbsp;มหาวิทยาลัยเทคโนโลยีพระจอมเกล้า พระนครเหนือ
+                            <br/>เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา E-Commerce ภาควิชาคอมพิวเตอร์
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+        <script defer src="/script/script.js "></script>
+    </body>
+
+</html>

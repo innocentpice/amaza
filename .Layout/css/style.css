@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Sukhumvit;
+    src: url('./font/SukhumvitSet-Text.ttf');
+}
+
+* {
+    font-family: Sukhumvit;
+}
+
+.greybg {
+    background-color: #f5f5f5;
+}

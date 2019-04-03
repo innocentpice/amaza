@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th" class="isMobile">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Amaza</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                padding: 5px;
+                text-align: left;
+            }
+        </style>
+    </head>
+
+    <body class="greybg">
+        <div class="App">
+            <nav class="navbar is-link" role="navigation" aria-label="dropdown navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item" href="">
+                            <h1 class="title" style="color:#fff;">Amaza</h1>
+                        </a>
+                        <div class="navbar-burger burger" onClick="$('#NavDropdown').toggleClass('is-hidden-touch');$(this).toggleClass('is-active');">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="navbar-end">
+                        <nav id="NavDropdown" class="navbar is-hidden-touch">
+                            <div class="navbar-item has-dropdown">
+                                <a class="navbar-link is-hidden-touch" style="background-color:hsl(217, 71%, 53%);" onClick=" $( '.navbar-item.has-dropdown').toggleClass( 'is-active'); ">
+                                  Chanachai Sappaso
+                                </a>
+                                <div class="navbar-dropdown ">
+                                    <a class="navbar-item ">
+                                        รายการทัวร์ของฉัน
+                                        <span class="tag " style="margin:0px 0.5em; background:hsl(141, 71%, 48%); ">
+                                          1
+                                        </span>
+                                    </a>
+                                    <a class="navbar-item ">
+                                        ตั้งค่าโปรไฟล์
+                                    </a>
+                                    <hr class="navbar-divider ">
+                                    <a class="navbar-item ">
+                                        <button class="button is-danger is-fullwidth" onClick="$('#login-modal').addClass('is-active');">ออกจากระบบ</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container is-fluid" style="margin-top:50px;">
+            <article class="tile is-child box">
+                <div class="columns">
+                    <div class="column is-one-third is-offset-2" style="margin-top:3em;">
+                        <h5 class="title is-5">Trip Name: _________</h5>
+                    </div>
+                    <div class="column" style="margin-top:3em;">
+                        <h4 class="title is-4">Price</h4>
+                    </div>
+                </div>
+                <div class="columns" style="margin-top:3em;">
+                    <div class="column">
+                        <div class="has-text-centered">
+                            <h4 class="subtitle is-4">ยังไม่ได้ชำระเงิน
+                                <h4>
+                        </div>
+                        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="margin-top:30px;">
+                            <tr>
+                                <th class="has-text-centered " style="padding:.5em ;width:3em;">ลำดับ</th>
+                                <th class="has-text-centered" style="padding:.5em;">ชื่อผู้จอง</th>
+                                <th class="has-text-centered" style="padding:.5em;width:11.5em;">ตัวเลือก</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>ไม่มีข้อมูล</td>
+                                <td>
+                                    <div class="level">
+                                        <a class="button is-primary is-rounded button is-small">ชำระเเล้ว</a>
+                                        <a class="button is-danger is-rounded button is-small">ยกเลิกการจอง</a
+                                    </div>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>ไม่มีข้อมูล</td>
+                                <td>
+                                    <div class="level">
+                                        <a class="button is-primary is-rounded button is-small">ชำระเเล้ว</a>
+                                        <a class="button is-danger is-rounded button is-small">ยกเลิกการจอง</a
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                        <div class="column">
+                            <div class="has-text-centered">
+                                <h4 class="subtitle is-4">ชำระเงินเรียบร้อยแล้ว
+                                    <h4>
+                            </div>
+                            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="margin-top:30px;">
+                                <tr>
+                                    <th class="has-text-centered" style="padding:.5em ;width:3em;">ลำดับ</th>
+                                    <th class="has-text-centered" style="padding:.5em;">ชื่อผู้จอง</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>ไม่มีข้อมูล</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>ไม่มีข้อมูล</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+            
+
+
+            </article>
+            </div>
+
+
+
+
+
+            <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+            <script defer src="/script/script.js "></script>
+    </body>
+
+</html>
